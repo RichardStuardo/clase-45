@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<ul id="list" onclick =" add()">
+		<li>1</li>
+		<li>2</li>
+	</ul>
+	<button onclick ="remove()"> Remover </button>
+	<script>
+
+		var next_number = 3;
+
+		var i = 0;
+		while (i < 50) {
+			add();
+
+			i += 1;
+		}
+		for (var i = 0; i < 100; i+=1) {
+			add();
+		}
+		function add() {
+			// body...
+		var node = document.createElement("li");
+		var text_node = document.createTextNode(next_number);
+		node.appendChild(text_node);
+
+
+		var target_node = document.getElementById("list");
+		target_node.appendChild(node);
+		if (next_number > 4) {
+			node.style.color = "red";
+		}
+		next_number += 1;
+		}
+
+
+		function remove() {
+		var list = document.getElementById("list");
+		var last_index = list.children.length -1;
+		var last_node = list.children[last_index];
+
+		list.removeChild(last_node);
+
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "proyectoconjs",
+  "private": true,
+  "dependencies": {
+    "jquery-backstretch": "^2.1.16"
+  }
+}

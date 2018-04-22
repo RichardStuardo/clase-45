@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+      function Car( model, postX) {
+        this.model = model;
+        this.postX = postX;
+        this.avanzar = function(cantidad){
+          this.postX += cantidad;
+        }
+      }
+      car =  new Car('Mercedens', 5);
+      car.avanzar(5);
+      console.log(car.postX);
+    </script>
+  </body>
+</html>
